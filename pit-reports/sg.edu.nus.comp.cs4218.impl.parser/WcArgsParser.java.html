@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>WcArgsParser.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package sg.edu.nus.comp.cs4218.impl.parser;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class WcArgsParser extends ArgsParser {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static final char IS_BYTE_COUNT = &#39;c&#39;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static final char IS_LINE_COUNT = &#39;l&#39;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public static final char IS_WORD_COUNT = &#39;w&#39;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public WcArgsParser() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        super();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        legalFlags.add(IS_BYTE_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        legalFlags.add(IS_LINE_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        legalFlags.add(IS_WORD_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean isByteCount() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_21'/>
+21
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_21'>3</a>
+<span>
+
+1. isByteCount : negated conditional &rarr; KILLED<br/>
+
+2. isByteCount : negated conditional &rarr; KILLED<br/>
+
+3. isByteCount : replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isByteCount &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return flags.isEmpty() || flags.contains(IS_BYTE_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean isLineCount() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_25'/>
+25
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_25'>3</a>
+<span>
+
+1. isLineCount : negated conditional &rarr; KILLED<br/>
+
+2. isLineCount : replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isLineCount &rarr; KILLED<br/>
+
+3. isLineCount : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return flags.isEmpty() || flags.contains(IS_LINE_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean isWordCount() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_29'/>
+29
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_29'>3</a>
+<span>
+
+1. isWordCount : negated conditional &rarr; KILLED<br/>
+
+2. isWordCount : replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isWordCount &rarr; KILLED<br/>
+
+3. isWordCount : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return flags.isEmpty() || flags.contains(IS_WORD_COUNT);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;String&#62; getFileNames() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_33'/>
+33
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_33'>1</a>
+<span>
+
+1. getFileNames : replaced return value with Collections.emptyList for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::getFileNames &rarr; TIMED_OUT<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>        return nonFlagArgs;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@13b0755e_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@13b0755e_21'>21</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_21'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isByteCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_NoFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isByteCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isByteCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()]</span></span> replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isByteCount &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@13b0755e_25'>25</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_25'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isLineCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_NoFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isLineCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()]</span></span> replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isLineCount &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isLineCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@13b0755e_29'>29</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_29'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isWordCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isWordCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByByteFlag_SetsCorrectFlag()]</span></span> replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::isWordCount &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isWordCount<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_NoFlag_SetsCorrectFlag()]</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@13b0755e_33'>33</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@13b0755e_33'/> 
+
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getFileNames<br/><b>Killed by : </b>none</span></span> replaced return value with Collections.emptyList for sg/edu/nus/comp/cs4218/impl/parser/WcArgsParser::getFileNames &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_NoFlag_SetsCorrectFlag()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByWordFlag_SetsCorrectFlag()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidAllFlags_SetsCorrectFlag()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidCutByByteFlag_SetsCorrectFlag()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.parser.WcArgsParserTest]/[method:parse_ValidLineCountFlag_SetsCorrectFlag()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.IORedirectionIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.IORedirectionIT]/[method:wc_WithInputRedirection_ShouldReturnCorrectOutput()] (1 ms)</li><li>sg.edu.nus.comp.cs4218.impl.cmd.PipeCommandTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.cmd.PipeCommandTest]/[method:evaluate_multipleChains_NoError()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.IORedirectionIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.IORedirectionIT]/[method:wc_WithOutputRedirection_ShouldCreateFileWithCorrectOutput()] (2 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.pipe.TeeApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.pipe.TeeApplicationIT]/[method:teeThenWc_CountWords_ShowsNumWords()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_wcMultipleFiles_shouldOutputWordCountsForAllValidFiles()] (2 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.15.2
+
+</body>
+</html>

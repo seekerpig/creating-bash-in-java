@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>LsArgsParser.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package sg.edu.nus.comp.cs4218.impl.parser;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public class LsArgsParser extends ArgsParser {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final static char FLAG_IS_RECURSIVE = &#39;R&#39;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    private final static char FLAG_IS_SORT_BY_EXT = &#39;X&#39;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public LsArgsParser() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        super();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        legalFlags.add(FLAG_IS_RECURSIVE);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        legalFlags.add(FLAG_IS_SORT_BY_EXT);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean isRecursive() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_16'/>
+16
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_16'>2</a>
+<span>
+
+1. isRecursive : replaced Boolean return with False for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isRecursive &rarr; SURVIVED<br/>
+
+2. isRecursive : replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isRecursive &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return flags.contains(FLAG_IS_RECURSIVE);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public Boolean isSortByExt() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_20'/>
+20
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_20'>2</a>
+<span>
+
+1. isSortByExt : replaced Boolean return with False for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isSortByExt &rarr; SURVIVED<br/>
+
+2. isSortByExt : replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isSortByExt &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>        return flags.contains(FLAG_IS_SORT_BY_EXT);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    public List&#60;String&#62; getDirectories() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_24'/>
+24
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_24'>1</a>
+<span>
+
+1. getDirectories : replaced return value with Collections.emptyList for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::getDirectories &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return nonFlagArgs;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_16'>16</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_16'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isRecursive<br/><b>Killed by : </b>none</span></span> replaced Boolean return with False for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isRecursive &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isRecursive<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest]/[method:run_InvalidFile_ErrorMessage()]</span></span> replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isRecursive &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_20'>20</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_20'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isSortByExt<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest]/[method:run_EmptyArgs_ListContentForOneFolder()]</span></span> replaced Boolean return with True for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isSortByExt &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isSortByExt<br/><b>Killed by : </b>none</span></span> replaced Boolean return with False for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::isSortByExt &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@5afd2f4e_24'>24</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@5afd2f4e_24'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getDirectories<br/><b>Killed by : </b>sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest]/[method:run_InvalidFile_ErrorMessage()]</span></span> replaced return value with Collections.emptyList for sg/edu/nus/comp/cs4218/impl/parser/LsArgsParser::getDirectories &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY</li>
+
+<li class='mutator'>EMPTY_RETURNS</li>
+
+<li class='mutator'>FALSE_RETURNS</li>
+
+<li class='mutator'>INCREMENTS</li>
+
+<li class='mutator'>INVERT_NEGS</li>
+
+<li class='mutator'>MATH</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS</li>
+
+<li class='mutator'>NULL_RETURNS</li>
+
+<li class='mutator'>PRIMITIVE_RETURNS</li>
+
+<li class='mutator'>TRUE_RETURNS</li>
+
+<li class='mutator'>VOID_METHOD_CALLS</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest]/[method:run_InvalidFile_ErrorMessage()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.app.LsApplicationTest]/[method:run_EmptyArgs_ListContentForOneFolder()] (1 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT]/[method:ls_PipedToSortWithInvalidOption_ThrowsSortException()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.SequenceIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.SequenceIT]/[method:sequence_twoValidCommandsWithDependency_FirstCommandShouldAffectSecondCommand()] (1 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT]/[method:ls_PipedToRm_DeleteFirstFileAndDisplayEmpty()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.MkdirApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.MkdirApplicationIT]/[method:testMkdir_mkdirSeqLs_shouldCreateAndLs()] (1 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT]/[method:ls_PipedToUniqWithSingleFile_DisplayNothing()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_withLsCommandWithPrefix_shouldOutputAllFoundFiles()] (2 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_withLsCommandWithTxtExtension_shouldOutputAllFoundFiles()] (3 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.pipe.LsApplicationIT]/[method:ls_PipedToSortWithNonexistentFile_DisplaysNoSuchFileError()] (0 ms)</li><li>sg.edu.nus.comp.cs4218.impl.ShellImplTest.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.ShellImplTest]/[method:parseAndEvaluate_validInput_shouldNotThrowException()] (16 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.CommandSubstitutionIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.CommandSubstitutionIT]/[method:echo_WithCommandSubstitutionLs_ShouldReturnEcho()] (1 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_withRmCommand_shouldOutputFoundFilesNotRemoved()] (3 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_withMvCommand_shouldOutputFoundFilesMoved()] (3 ms)</li><li>sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT.[engine:junit-jupiter]/[class:sg.edu.nus.comp.cs4218.impl.integration.GlobbingIT]/[method:globbing_withIORedirectionAndQuoting_shouldOutputSearchResult()] (3 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='https://pitest.org'>PIT</a> 1.15.2
+
+</body>
+</html>
